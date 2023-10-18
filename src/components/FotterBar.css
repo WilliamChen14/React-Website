@@ -10,12 +10,12 @@
   a.social:hover {
     transform: translateY(-2px);
   }
-  a.github {
-    color: black;
+  a.youtube {
+    color: #eb3223;
   }
   
-  a.linkedin {
-    color: #0077B5;
+  a.facebook {
+    color: #4968ad;
   }
   
   a.twitter {
@@ -23,5 +23,5 @@
   }
   
   a.instagram {
-    color: #DD2A7B ;
+    color: black;
   }

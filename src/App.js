@@ -9,6 +9,7 @@ import Bill from "./Bill";
 import Login from "./Login";
 import Feedback from "./Feedback";
 import Home from ".";
+import FooterBar from "./components/FooterBar";
 
 function headerList() {}
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/Bill" element={<Bill />} />
           <Route path="/Login" element={<Login />} />
         </Routes>
+        <FooterBar />
       </Router>
     </div>
   );
