@@ -6,13 +6,21 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 function HeaderLinks() {
-  let items = ["Projects", "Education", "Feedback", "Bill", "Login"];
+  let items = ["Home", "Projects", "Education", "Feedback", "Bill", "Login"];
 
   const getMessage = () => {
     return items.length === 0 && <p>No items Found</p>;
   };
 
   const handleClick = (event) => console.log(event);
+
+  const getHref = (item) => {
+    let tempHref = "/".concat(item);
+    if (tempHref === "/Home") {
+      return "/";
+    }
+    return tempHref;
+  };
 
   return (
     <>
@@ -22,7 +30,7 @@ function HeaderLinks() {
             <Nav className="me-auto float-right">
               {items.map((item, index) => (
                 <Nav.Link
-                  href= {"/".concat(item)}
+                  href={getHref(item)}
                   className="p-2 "
                   key={item}
                   onClick={handleClick}
